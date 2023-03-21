@@ -1,6 +1,8 @@
 #ifndef main_h
-	#define main_h
-/* Main Function */
+#define main_h
+/*
+ *  Main.h Function 
+*/
 
 	int _putchar(char);
 	void print_alphabet(void);
@@ -17,4 +19,4 @@
 	void print_times_table(int n);
 
 
-	#endif
+#endif
