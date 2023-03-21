@@ -1,4 +1,4 @@
-#inlude <stoio.h>
+#inlude <stdio.h>
 /**
  * Main entry point
  * alwayes success 0 */
