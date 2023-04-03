@@ -2,6 +2,9 @@
 
 /**
  * *_memcpy - copies memory area
+ * @dest: pointer to char params
+ * @src: pointer to char params
+ * @n: size
  * Return: pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
