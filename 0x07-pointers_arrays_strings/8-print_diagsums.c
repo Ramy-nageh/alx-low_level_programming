@@ -1,51 +1,30 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * print_diagsums - print additions of the two diagonals.
- * @a: source matrix
- * @size: size NxN of matrix
+ *print_diagsums - prints the sum of the two diagonals
+ *of a square matrix of integers
+ *@a: the matrix
+ *@size: the length of the square matrix
  *
- * Return: chessboard.
+ * Return: void
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, sumdiag1 = 0, sumdiag2 = 0, step1, step2;
+	int i = 0;
+	int j = size - 1;
+	int sum1 = 0;
+	int sum2 = 0;
 
-	for (i = 0; i <= (size - 1); i++)
+	while (i <= (size * size))
 	{
-		step1 =  (size + 1) * i;
-		sumdiag1 = sumdiag1 + *(a + step1);
+		sum1 += *(a + i);
+		i += size + 1;
 	}
-
-	for (j = 1; j <= size; j++)
+	while (j <= (size * size) - size)
 	{
-		step2 = (size - 1) * j;
-		sumdiag2 = sumdiag2 + *(a + step2);
+		sum2 += *(a + j);
+		j += size - 1;
 	}
-	printf("%d, %d\n", sumdiag1, sumdiag2);
-}#include "main.h"
-#include <stdio.h>
-/**
- * print_diagsums - print additions of the two diagonals.
- * @a: source matrix
- * @size: size NxN of matrix
- *
- * Return: chessboard.
- */
-void print_diagsums(int *a, int size)
-{
-	int i, j, sumdiag1 = 0, sumdiag2 = 0, step1, step2;
-
-	for (i = 0; i <= (size - 1); i++)
-	{
-		step1 =  (size + 1) * i;
-		sumdiag1 = sumdiag1 + *(a + step1);
-	}
-
-	for (j = 1; j <= size; j++)
-	{
-		step2 = (size - 1) * j;
-		sumdiag2 = sumdiag2 + *(a + step2);
-	}
-	printf("%d, %d\n", sumdiag1, sumdiag2);
+	printf("%d, %d\n", sum1, sum2);
 }
